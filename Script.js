@@ -2,7 +2,7 @@
 // @name         Hide YouTube Shorts (Desktop)
 // @version      1.0
 // @description  Removes Shorts from Home, Subscriptions, and Search on desktop.
-// @homepageURL  https://github.com/Neogamezzz/NoShortsPC
+// @homepageURL  https://github.com/Neogamezzz/NoShortsPC/raw/main/Script.js
 // @match        https://www.youtube.com/*
 // ==/UserScript==
 
