@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Hide YouTube Shorts (Desktop)
-// @version      1.0
+// @version      1.1
 // @description  Removes Shorts from Home, Subscriptions, and Search on desktop.
 // @homepageURL  https://github.com/Neogamezzz/NoShortsPC/raw/main/Script.js
 // @match        https://www.youtube.com/*
@@ -16,6 +16,9 @@
         /* Hides the entire shelf of Shorts on the Home, Subscriptions, and Search pages */
         ytd-rich-shelf-renderer[is-shorts],
         ytd-reel-shelf-renderer,
+
+        /* Hides the Shorts shelf in search results */
+        grid-shelf-view-model,
 
         /* Hides individual Shorts in search results or other mixed content lists */
         ytd-video-renderer:has(a[href^="/shorts"]),
@@ -35,7 +38,7 @@
       if (mutation.addedNodes.length) {
         if (
           document.querySelector(
-            'ytd-rich-shelf-renderer[is-shorts], ytd-reel-shelf-renderer, ytd-video-renderer:has(a[href^="/shorts"])'
+            'ytd-rich-shelf-renderer[is-shorts], ytd-reel-shelf-renderer, grid-shelf-view-model, ytd-video-renderer:has(a[href^="/shorts"])'
           )
         ) {}
       }
